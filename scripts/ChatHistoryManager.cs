@@ -22,27 +22,6 @@ public class HappyChatListManager : MonoBehaviour
         Debug.Log("count is " + chatDataList.Count);
         List<HappyChatData> latestChats = chatDataList.GetRange(chatDataList.Count - count, count);
         Debug.Log("latestChats len of " + latestChats.Count);
-
-        //Populate.populate(count, latestChats);
-
-
-        // Populate the scrollable list with HappyChatData
-        /*
-        foreach (var chat in latestChats)
-        {
-            GameObject newItem = Instantiate(happyChatItemPrefab, contentPanel);
-            
-            // Access the text fields and set values
-            TMP_Text[] textFields = newItem.GetComponentsInChildren<TMP_Text>();
-            textFields[0].text = "Amount: $" + chat.amount;
-            textFields[1].text = "Date: " + chat.date;
-            textFields[2].text = "Message: " + chat.message;
-
-            // Add click functionality to the item 
-           // Button button = newItem.GetComponent<Button>();
-            //button.onClick.AddListener(() => OnChatItemClicked(chat));
-        }
-        */
     }
 
     public void populate(int max_num, List<HappyChatData> chatList){
